@@ -11,11 +11,11 @@
 |
 */
 
-$factory->define(App\User::class, function (Faker\Generator $faker) {
-    return [
-        'name' => $faker->name,
-        'email' => $faker->safeEmail,
-        'password' => bcrypt(str_random(10)),
-        'remember_token' => str_random(10),
-    ];
+$factory->define(App\Video::class, function(Faker\Generator $faker) {
+return [
+ 'title' => $faker->name, // Génère un faux nom
+ 'url' => $faker->url, // Génère une adresse e-mail fictive
+ 'lyric' => $faker->text, // Génère un mot de passe crypté d'une chaîne de 10 caractères
+ ]
+
 });
